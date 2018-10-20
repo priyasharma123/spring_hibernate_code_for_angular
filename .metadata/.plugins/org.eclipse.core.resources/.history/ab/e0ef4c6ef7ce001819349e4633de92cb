@@ -1,0 +1,31 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.ImageMessageEntity;
+import com.example.demo.service.ImageMessageService;
+
+@RestController
+@RequestMapping("/")
+public class ImageMessageController {
+	
+	@Autowired
+	ImageMessageService imageMessageService;
+	
+	@GetMapping("/getimages")
+	public List<ImageMessageEntity> getImages() {
+		return this.imageMessageService.getRandomData();
+	}
+	
+	@GetMapping("/storeImage")
+	public String storeImage() {
+		return this.imageMessageService.insertMessageAndImage();
+	}
+	
+}

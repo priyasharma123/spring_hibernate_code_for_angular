@@ -1,0 +1,25 @@
+package com.example.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.dao.ImageMessageDao;
+import com.example.demo.entity.ImageMessageEntity;
+
+public class ImageMessageServiceImpl implements ImageMessageService {
+	@Autowired
+	ImageMessageDao imageMessageDao;
+
+	@Override
+	public List<ImageMessageEntity> getRandomData() {
+		return this.imageMessageDao.getRandomImage();
+	}
+
+	@Override
+	public String insertMessageAndImage() {
+		// TODO Auto-generated method stub
+		return this.imageMessageDao.insertMessageAndImage();
+	}
+
+}

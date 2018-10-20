@@ -1,0 +1,15 @@
+package com.example.demo.service;
+
+import com.example.demo.entity.ImageMessageEntity;
+
+public class ImageMessageServiceImpl implements ImageMessageService {
+
+	@Override
+	public ImageMessageEntity getRandomData() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+}
