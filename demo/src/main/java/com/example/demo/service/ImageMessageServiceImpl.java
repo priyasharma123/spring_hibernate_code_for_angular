@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -29,9 +30,9 @@ public class ImageMessageServiceImpl implements ImageMessageService {
 	
 
 	@Override
-	public String insertMessageAndImage(MultipartFile file) {
+	public String insertMessageAndImage(MultipartFile file,String message) throws IOException {
 		// TODO Auto-generated method stub
-		return this.imageMessageDao.insertMessageAndImage(file);
+		return this.imageMessageDao.insertMessageAndImage(file,message);
 	}
 
 }
